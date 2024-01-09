@@ -1,0 +1,21 @@
+.page-footer {
+  background-color: var(--footer-color);
+  color: var(--text-color);
+  box-shadow: inset 5px 5px 10px var(--text-color-light);
+  & h3 {
+    font-family: "Times New Roman", Times, serif;
+  }
+  & .icons a {
+    color: var(--text-color);
+    background-color: #796c4f;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+}

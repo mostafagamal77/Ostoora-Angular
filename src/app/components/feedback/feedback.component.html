@@ -1,0 +1,45 @@
+<section class="py-5 position-relative feedback" id="review">
+  <h2 class="heading text-center text-capitalize text-light fw-bold">
+    our clients feedback
+  </h2>
+  <div class="container">
+    <div class="feedback-content my-5">
+      <div class="feedback-slider">
+        <owl-carousel-o [options]="feedbackOptions" class="feedback-slider">
+          <ng-container *ngFor="let feedback of feedbackSlides">
+            <ng-template carouselSlide>
+              <div class="card">
+                <img
+                  loading="lazy"
+                  [src]="feedback.imgSrc"
+                  class="card-img-top"
+                  alt="feedback image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">
+                    {{ feedback.name }}
+                  </h5>
+                  <div
+                    class="opinion card-text d-flex justify-content-between align-intems-center"
+                  >
+                    <p class="text-capitalize">{{ feedback.opinion }}</p>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-regular fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+  <div class="dots">
+    <img loading="lazy" src="./assets/imgs/dots.png" alt="dots" />
+  </div>
+</section>

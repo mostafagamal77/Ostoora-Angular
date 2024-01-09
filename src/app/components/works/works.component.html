@@ -1,0 +1,97 @@
+<section class="pb-5 position-relative works" id="blog">
+  <div class="container">
+    <h2 class="heading text-center text-capitalize text-light my-5 fw-bold">
+      our work
+    </h2>
+    <p class="works-subtitle text-center text-light fw-medium fs-3">
+      It is a long established fact that a reader will be distracted by the
+      readable content of a page when looking at its layout.
+    </p>
+
+    <div class="works-content pt-5 px-5">
+      <swiper-container class="works-slider px-4" autoplay="true">
+        <swiper-slide *ngFor="let work of worksSlides">
+          <div class="card rounded-4">
+            <img
+              loading="lazy"
+              [src]="work.imgSrc"
+              class="img-fluid"
+              alt="card image"
+            />
+            <div class="card-body text-center text-light pt-4">
+              <h5 class="card-title text-capitalize pb-2">
+                {{ work.cardHeading }}
+              </h5>
+              <p class="card-text">
+                {{ work.cardText }}
+              </p>
+            </div>
+            <div class="card-overlay">
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+
+      <!-- <div class="slider-one pb-4">
+        <owl-carousel-o [options]="WorksOptions" class="works-slider">
+          <ng-container *ngFor="let work of worksSlides">
+            <ng-template carouselSlide>
+              <div class="card rounded-4">
+                <img
+                  loading="lazy"
+                  [src]="work.imgSrc"
+                  class="img-fluid"
+                  alt="card image"
+                />
+                <div class="card-body text-center text-light pt-4">
+                  <h5 class="card-title text-capitalize pb-2">
+                    {{ work.cardHeading }}
+                  </h5>
+                  <p class="card-text">
+                    {{ work.cardText }}
+                  </p>
+                </div>
+                <div class="card-overlay">
+                  <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div> -->
+      <!-- <div class="slider-two">
+        <owl-carousel-o [options]="WorksOptions" class="works-slider">
+          <ng-container *ngFor="let work of worksSlides2">
+            <ng-template carouselSlide>
+              <div class="card rounded-4">
+                <img
+                  loading="lazy"
+                  [src]="work.imgSrc"
+                  class="img-fluid"
+                  alt="card image"
+                />
+
+                <div class="card-body text-center text-light pt-4">
+                  <h5 class="card-title text-capitalize pb-2">
+                    {{ work.cardHeading }}
+                  </h5>
+                  <p class="card-text">
+                    {{ work.cardText }}
+                  </p>
+                </div>
+                <div class="card-overlay">
+                  <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="dots">
+    <img loading="lazy" src="./assets/imgs/dots.png" alt="dots" />
+  </div>
+</section>

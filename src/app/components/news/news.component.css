@@ -1,0 +1,32 @@
+.news {
+  & .news-head img {
+    width: 40px !important;
+  }
+  & .news-card {
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+  }
+  & .news-card:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    scale: 1.05;
+    & img {
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+    }
+  }
+  .open {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  & .dots-lg {
+    left: 10px;
+  }
+}

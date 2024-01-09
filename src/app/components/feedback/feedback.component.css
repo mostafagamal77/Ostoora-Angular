@@ -1,0 +1,15 @@
+.feedback {
+  & .feedback-slider {
+    padding: 40px 0;
+    & .card {
+      box-shadow: 8px 8px 10px var(--shadow-color);
+      & .stars {
+        color: var(--button-color);
+      }
+    }
+  }
+  & .dots {
+    right: 10px;
+    bottom: 10px;
+  }
+}

@@ -1,0 +1,33 @@
+<section class="videos py-5 position-relative">
+  <div class="container">
+    <swiper-container class="videos-slider px-4" navigation="true">
+      <swiper-slide *ngFor="let video of videosSlides">
+        <div class="position-relative vid-card">
+          <img
+            loading="lazy"
+            class="img-fluid w-100"
+            [src]="video.imgSrc"
+            alt="video image"
+          />
+          <div
+            [attr.data-videoSrc]="video.videoSrc"
+            class="video-overlay"
+            (click)="openModal($event)"
+          >
+            <button class="btn play-video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <div class="dots">
+    <img loading="lazy" src="./assets/imgs/dots.png" alt="dots image" />
+  </div>
+</section>
+
+<app-video-popup
+  [videoSrc]="videoSrc"
+  *ngIf="_VideoOpenService.openVideo.value"
+></app-video-popup>

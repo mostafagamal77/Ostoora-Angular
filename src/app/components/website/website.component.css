@@ -1,0 +1,11 @@
+.website {
+  & h2 {
+    color: #d4af31;
+  }
+  & p {
+    color: var(--text-color-light);
+  }
+  & a:hover {
+    color: var(--text-color-light);
+  }
+}

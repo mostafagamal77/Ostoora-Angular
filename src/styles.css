@@ -1,0 +1,121 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ========== Start Variables ========== */
+:root {
+  --main-color: #bd9929;
+  --nav-color: #2b2921;
+  --text-color: #fffefe;
+  --text-color-light: #b7b3a3;
+  --form-color: #f3f2f1;
+  --shadow-color: #555042;
+  --button-color: #cbb052;
+  --footer-color: #a89a6a;
+  --gradient-color: linear-gradient(to right, #bba962 1%, #090909 55%);
+  --transition: 0.3s;
+  /* --swiper-navigation-size: 30px; */
+}
+/* ========== End Variables ========== */
+
+/* ========== Start Global Rules ========== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  position: relative;
+}
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background-image: var(--gradient-color);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+button {
+  outline: none !important;
+  border: none !important;
+}
+
+@media (max-width: 767px) {
+  img {
+    /* max-width: 100% !important; */
+    width: 100% !important;
+  }
+}
+main {
+  margin-top: 60px;
+}
+/* ========== End Global Rules ========== */
+
+/* ========== Start Components ========== */
+.dots,
+.dots-lg {
+  position: absolute;
+  width: 80px;
+  & img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .dots,
+  .dots-lg {
+    width: 40px;
+  }
+}
+.main-btn {
+  display: block;
+  width: fit-content;
+  background-color: var(--button-color);
+  padding: 5px 5rem;
+  font-size: 18px;
+  box-shadow: inset 9px 9px 15px rgba(189, 153, 41, 42%),
+    9px 9px 15px rgba(189, 153, 41, 42%);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.submit:hover {
+  background-color: transparent;
+}
+/* ========== End Components ========== */
+
+/* ========== Start Services Slider Styles ========== */
+
+.services-slider .owl-next,
+.services-slider .owl-prev {
+  background: none !important;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  & svg {
+    font-size: 30px;
+    color: var(--light-color) !important;
+  }
+}
+.services-slider .owl-prev {
+  left: -25px !important;
+}
+.services-slider .owl-next {
+  right: -25px !important;
+}
+
+@media (max-width: 767px) {
+  .services-slider .owl-next svg,
+  .services-slider .owl-prev svg {
+    font-size: 20px;
+  }
+}
+/* ========== End Services Slider Styles ========== */

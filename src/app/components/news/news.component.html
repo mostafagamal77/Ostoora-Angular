@@ -1,0 +1,44 @@
+<section class="news py-5 position-relative" id="daily">
+  <div class="container">
+    <div class="news-head text-light fw-bold fs-3 mb-5">
+      <img
+        loading="lazy"
+        class="me-2"
+        src="./assets/imgs/daily stories.png"
+        alt="daily news"
+      />
+      <span class="head">Daily News:</span>
+    </div>
+    <div class="news-content mb-4">
+      <div class="news-slider">
+        <owl-carousel-o [options]="newsOptions" class="works-slider">
+          <ng-container *ngFor="let new of newsSlides">
+            <ng-template carouselSlide>
+              <div class="news-card">
+                <div class="reel">
+                  <img
+                    (click)="openModal($event)"
+                    [attr.data-video]="new.videoSrc"
+                    loading="lazy"
+                    class="img-fluid"
+                    [src]="new.imgSrc"
+                    alt="news image"
+                  />
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+
+  <div class="dots-lg">
+    <img loading="lazy" src="./assets/imgs/dotslg.png" alt="dots" />
+  </div>
+</section>
+
+<app-video-popup
+  [videoSrc]="videoSrc"
+  *ngIf="_VideoOpenService.openReel.value"
+></app-video-popup>

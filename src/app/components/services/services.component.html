@@ -1,0 +1,32 @@
+<section class="services pb-5 pt-4 position-relative" id="services">
+  <div class="container">
+    <div class="px-3">
+      <owl-carousel-o [options]="servicesOptions" class="services-slider">
+        <ng-container *ngFor="let service of servicesSlides">
+          <ng-template carouselSlide>
+            <div
+              class="d-flex align-items-center justify-content-center flex-column g-3"
+            >
+              <div class="img-content">
+                <img
+                  loading="lazy"
+                  class="img-fluid"
+                  [src]="service.imgSrc"
+                  alt=" services image"
+                />
+              </div>
+              <p
+                class="service-text text-capitalize fw-bold text-light text-center mt-3"
+              >
+                {{ service.text }}
+              </p>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+  <div class="dots-lg">
+    <img loading="lazy" src="./assets/imgs/dotslg.png" alt="dots" />
+  </div>
+</section>

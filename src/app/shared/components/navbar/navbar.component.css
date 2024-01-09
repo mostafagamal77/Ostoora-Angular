@@ -1,0 +1,84 @@
+.page-header {
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+  z-index: 100;
+  background-color: var(--nav-color);
+  box-shadow: 0 8px 15px rgba(90, 87, 77, 34%);
+  position: relative;
+  & .page-nav {
+    color: var(--text-color);
+    & .logo {
+      width: 45px;
+    }
+    .menu-toggler {
+      padding: 5px;
+      & span {
+        display: block;
+        background-color: var(--text-color);
+        height: 3px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+      & span:nth-child(1) {
+        width: 20px;
+      }
+      & span:nth-child(2) {
+        width: 25px;
+      }
+      & span:nth-child(3) {
+        width: 15px;
+
+        margin-bottom: 0;
+      }
+    }
+    & .nav-links {
+      & li {
+        & a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--text-color);
+          transition: var(--transition);
+          -webkit-transition: var(--transition);
+          -moz-transition: var(--transition);
+          -ms-transition: var(--transition);
+          -o-transition: var(--transition);
+        }
+        & a:hover,
+        & a.active {
+          font-weight: bold;
+        }
+      }
+    }
+    .toggle-menu {
+      background-color: var(--text-color-light);
+      width: 100%;
+      padding: 20px;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      & li {
+        width: 100%;
+        margin-bottom: 3px;
+      }
+      & a {
+        box-shadow: 0 1px var(--shadow-color);
+        padding-bottom: 5px;
+        color: #000 !important;
+      }
+    }
+    @media (max-width: 767px) {
+    }
+    .language {
+      cursor: pointer;
+    }
+  }
+}

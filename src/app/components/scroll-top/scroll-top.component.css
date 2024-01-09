@@ -1,0 +1,18 @@
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: var(--main-color);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 101;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}

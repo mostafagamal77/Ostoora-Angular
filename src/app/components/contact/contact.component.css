@@ -1,0 +1,33 @@
+.contact {
+  background-color: var(--form-color);
+  & .input-content {
+    position: relative;
+    & label {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      translate: 0 -50%;
+      font-size: 18px;
+    }
+    & .ar {
+      right: 10px;
+    }
+    & input:not(type[submit]),
+    & textarea {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      border-top: 2px solid var(--main-color);
+      width: 100%;
+      padding: 10px 6rem 10px 6rem;
+    }
+    & textarea {
+      padding: 10px;
+      height: 200px;
+      resize: none;
+    }
+  }
+  & .submit {
+    margin: 15px auto;
+  }
+}
