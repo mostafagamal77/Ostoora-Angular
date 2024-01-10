@@ -1,16 +1,15 @@
 <section class="pb-5 position-relative works" id="blog">
   <div class="container">
     <h2 class="heading text-center text-capitalize text-light my-5 fw-bold">
-      our work
+      {{ "works.heading" | translate }}
     </h2>
     <p class="works-subtitle text-center text-light fw-medium fs-3">
-      It is a long established fact that a reader will be distracted by the
-      readable content of a page when looking at its layout.
+      {{ "works.workSub" | translate }}
     </p>
 
     <div class="works-content pt-5 px-2 px-md-4">
-      <swiper-container class="works-slider px-md-4" autoplay="true">
-        <swiper-slide *ngFor="let work of worksSlides">
+      <swiper-container class="works-slider px-md-4" autoplay="true" dir="ltr">
+        <swiper-slide *ngFor="let work of 'works.slides' | translate">
           <div class="card rounded-4">
             <img
               loading="lazy"

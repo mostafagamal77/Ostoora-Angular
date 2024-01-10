@@ -9,34 +9,20 @@
         ></a>
       </div>
 
-      <div class="col-6">
+      <div class="col-6" dir="ltr">
         <swiper-container
           autoplay="true"
           autoplay-delay="3000"
           autoplay-disable-on-interaction="false"
           space-between="10"
         >
-          <swiper-slide
-            ><h2
+          <swiper-slide *ngFor="let slide of 'landingSlides' | translate">
+            <h2
               class="heading text-center text-capitalize text-light my-3 my-md-4 fw-bold"
             >
-              Alostoora Cleaning
+              {{ slide.heading }}
             </h2>
-            <img
-              class="img-fluid"
-              src="./assets/imgs/landing1.jpg"
-              alt="landing image"
-          /></swiper-slide>
-          <swiper-slide
-            ><h2
-              class="heading text-center text-capitalize text-light my-3 my-md-4 fw-bold"
-            >
-              ostoora deep Cleaning
-            </h2>
-            <img
-              class="img-fluid"
-              src="./assets/imgs/landing2.png"
-              alt="landing image"
+            <img class="img-fluid" [src]="[slide.imgSrc]" alt="landing image"
           /></swiper-slide>
         </swiper-container>
       </div>

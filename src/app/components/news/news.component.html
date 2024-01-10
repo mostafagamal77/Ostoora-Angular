@@ -3,13 +3,13 @@
     <div class="news-head text-light fw-bold fs-3 mb-5">
       <img
         loading="lazy"
-        class="me-2"
+        class="mx-2"
         src="./assets/imgs/daily stories.png"
         alt="daily news"
       />
-      <span class="head">Daily News:</span>
+      <span class="head">{{ "reels.heading" | translate }}</span>
     </div>
-    <div class="news-content mb-4">
+    <div class="news-content mb-4" dir="ltr">
       <div class="news-slider">
         <owl-carousel-o [options]="newsOptions" class="works-slider">
           <ng-container *ngFor="let new of newsSlides">

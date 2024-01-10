@@ -1,25 +1,36 @@
 <section class="contact py-3" id="contact">
   <div class="container">
-    <h2 class="fw-bold text-capitalize mb-3 head">send message to us</h2>
+    <h2 class="fw-bold text-capitalize mb-3 head">
+      {{ "contact.heading" | translate }}
+    </h2>
     <form class="form">
       <div class="input-content">
-        <label class="input-label name" for="username">Name :</label>
+        <label class="input-label name" for="username">{{
+          "contact.name" | translate
+        }}</label>
         <input type="text" id="username" />
       </div>
       <div class="input-content">
-        <label class="input-label phone" for="phone">Phone :</label>
+        <label class="input-label phone" for="phone">{{
+          "contact.phone" | translate
+        }}</label>
         <input type="text" id="phone" />
       </div>
       <div class="input-content">
-        <label class="input-label email" for="email">E-mail :</label>
+        <label class="input-label email" for="email">{{
+          "contact.email" | translate
+        }}</label>
         <input type="email" id="email" />
       </div>
       <div class="input-content">
-        <textarea id="message" placeholder="Message"></textarea>
+        <textarea
+          id="message"
+          [placeholder]="'contact.heading' | translate"
+        ></textarea>
       </div>
       <input
         type="submit"
-        value="Send"
+        [value]="'contact.submit' | translate"
         class="btn rounded-pill fw-medium main-btn submit"
       />
     </form>

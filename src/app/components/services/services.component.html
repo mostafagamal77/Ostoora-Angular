@@ -1,8 +1,8 @@
 <section class="services pb-5 pt-4 position-relative" id="services">
   <div class="container">
-    <div class="px-3">
+    <div class="px-3" dir="ltr">
       <owl-carousel-o [options]="servicesOptions" class="services-slider">
-        <ng-container *ngFor="let service of servicesSlides">
+        <ng-container *ngFor="let service of 'servicesSlides' | translate">
           <ng-template carouselSlide>
             <div
               class="d-flex align-items-center justify-content-center flex-column g-3"

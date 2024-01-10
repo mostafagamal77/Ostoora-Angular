@@ -89,9 +89,14 @@ main {
   background-color: transparent;
 }
 /* ========== End Components ========== */
-
+/* ========== Start Header ========== */
+.page-header {
+  height: 60px;
+  background-color: var(--nav-color) !important;
+  box-shadow: 0 8px 15px rgba(90, 87, 77, 34%);
+  /* ========== End Header ========== */
+}
 /* ========== Start Services Slider Styles ========== */
-
 .services-slider .owl-next,
 .services-slider .owl-prev {
   background: none !important;

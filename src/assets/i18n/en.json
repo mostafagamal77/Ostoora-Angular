@@ -1,0 +1,165 @@
+{
+  "navLinks": {
+    "home": "Home",
+    "ourServices": "Our Services",
+    "blog": "Blog",
+    "stories": "Daily Stories",
+    "clientsReviews": "Clients Review",
+    "contactUs": "Contact Us"
+  },
+  "landingSlides": [
+    {
+      "heading": "Alostoora Cleaning",
+      "imgSrc": "./assets/imgs/landing1.jpg"
+    },
+    {
+      "heading": "ostoora deep Cleaning",
+      "imgSrc": "./assets/imgs/landing2.png"
+    }
+  ],
+  "servicesSlides": [
+    {
+      "text": "play demo for courses",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "best educators",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "build your career",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "play demo for courses",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "best educators",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "build your career",
+      "imgSrc": "./assets/imgs/broom.png"
+    }
+  ],
+  "works": {
+    "heading": "our work",
+    "workSub": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "slides": [
+      {
+        "imgSrc": "./assets/imgs/work1.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work2.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work3.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work4.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work5.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work6.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work1.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work5.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work6.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work1.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work2.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work3.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work4.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work2.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work3.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work4.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work5.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work6.png",
+        "cardHeading": "cleaning",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      }
+    ]
+  },
+  "reels": {
+    "heading": "Daily News"
+  },
+  "reviews": {
+    "heading": "Our Clients Feedback"
+  },
+  "contact": {
+    "heading": "Send Message To Us",
+    "name": "Name:",
+    "phone": "Phone:",
+    "email": "E-mail:",
+    "message": "Message",
+    "submit": "send"
+  },
+  "website": {
+    "heading": "visit our website now!",
+    "subtitle": "know more about us",
+    "visitBtn": "visit our website"
+  },
+  "footer": {
+    "heading": "General House Decoration",
+    "subtitle": "We Will Make Your Home Look Better"
+  }
+}

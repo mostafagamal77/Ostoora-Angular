@@ -7,33 +7,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./services.component.css'],
 })
 export class ServicesComponent {
-  servicesSlides: any[] = [
-    {
-      text: 'play demo for courses',
-      imgSrc: './assets/imgs/broom.png',
-    },
-    {
-      text: 'best educators',
-      imgSrc: './assets/imgs/broom.png',
-    },
-    {
-      text: 'build your career',
-      imgSrc: './assets/imgs/broom.png',
-    },
-    {
-      text: 'play demo for courses',
-      imgSrc: './assets/imgs/broom.png',
-    },
-    {
-      text: 'best educators',
-      imgSrc: './assets/imgs/broom.png',
-    },
-    {
-      text: 'build your career',
-      imgSrc: './assets/imgs/broom.png',
-    },
-  ];
-
   servicesOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

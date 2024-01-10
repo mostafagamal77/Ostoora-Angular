@@ -1,0 +1,140 @@
+{
+  "navLinks": {
+    "home": "الرئيسية",
+    "ourServices": "خدماتنا",
+    "blog": "اعمالنا",
+    "stories": "فيديوهات",
+    "clientsReviews": "اراء العملاء",
+    "contactUs": "اتصل بنا"
+  },
+  "landingSlides": [
+    {
+      "heading": "الاسطورة للتنظيف",
+      "imgSrc": "./assets/imgs/landing1.jpg"
+    },
+    {
+      "heading": "الاسطورة للتنظيف العميق",
+      "imgSrc": "./assets/imgs/landing2.png"
+    }
+  ],
+  "servicesSlides": [
+    {
+      "text": "تشغيل العرض التوضيحي للدورات",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "أفضل المعلمين",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "ابني حياتك المهنية",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "تشغيل العرض التوضيحي للدورات",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "أفضل المعلمين",
+      "imgSrc": "./assets/imgs/broom.png"
+    },
+    {
+      "text": "ابني حياتك المهنية",
+      "imgSrc": "./assets/imgs/broom.png"
+    }
+  ],
+  "works": {
+    "heading": "اعمالنا",
+    "workSub": "إنها حقيقة مثبتة منذ زمن طويل أن المحتوى المقروء للصفحة سوف يشتت انتباه القارئ عند النظر إلى تخطيطها.",
+    "slides": [
+      {
+        "imgSrc": "./assets/imgs/work1.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work2.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work3.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work4.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work5.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work6.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work1.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work2.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work3.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work4.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work5.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work6.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      },
+      {
+        "imgSrc": "./assets/imgs/work6.png",
+        "cardHeading": "التنظيف",
+        "cardText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet."
+      }
+    ]
+  },
+  "reels": {
+    "heading": "اخبار يومية"
+  },
+  "reviews": {
+    "heading": "اراء عملائنا"
+  },
+  "contact": {
+    "heading": "ارسل لنا رسالة ",
+    "name": "الاسم :",
+    "phone": "الموبايل :",
+    "email": "الايميل :",
+    "message": "رسالتك :",
+    "submit": "ارسل"
+  },
+  "website": {
+    "heading": "زور موقعنا الان!",
+    "subtitle": "اعرف المزيد عنا",
+    "visitBtn": "زور موقعنا"
+  },
+  "footer": {
+    "heading": "ديكورات منزلية عامة",
+    "subtitle": "سنجعل منزلك يبدو أفضل"
+  }
+}

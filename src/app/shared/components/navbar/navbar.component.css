@@ -1,14 +1,4 @@
-.page-header {
-  position: fixed !important;
-  width: 100%;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  height: 60px;
-  z-index: 100;
-  background-color: var(--nav-color);
-  box-shadow: 0 8px 15px rgba(90, 87, 77, 34%);
-  position: relative;
+header {
   & .page-nav {
     color: var(--text-color);
     & .logo {

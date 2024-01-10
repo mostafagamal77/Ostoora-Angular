@@ -1,14 +1,39 @@
-<app-navbar></app-navbar>
-<main class="page-content">
-  <app-scroll-top></app-scroll-top>
-  <app-home></app-home>
-  <app-services></app-services>
-  <app-works></app-works>
-  <app-news></app-news>
-  <app-feedback></app-feedback>
-  <app-videos></app-videos>
-  <app-contact></app-contact>
-  <app-website></app-website>
-</main>
+<div class="changeDir" [dir]="_ChangeLangService.isRtl.value ? 'rtl' : 'ltr'">
+  <div class="page-header fixed-top w-100">
+    <div class="container d-flex justify-content-between align-items-center">
+      <app-navbar class="flex-grow-1"></app-navbar>
+      <button
+        *ngIf="!_ChangeLangService.isRtl.value"
+        (click)="arLang('ar')"
+        data-lang=""
+        class="btn text-light language fw-bold fs-5"
+      >
+        <i class="fa-solid fa-globe"></i>
+        <span class="mx-1 text-uppercase">AR</span>
+      </button>
+      <button
+        *ngIf="_ChangeLangService.isRtl.value"
+        (click)="enLang('en')"
+        data-lang=""
+        class="btn text-light language fw-bold fs-5"
+      >
+        <i class="fa-solid fa-globe"></i>
+        <span class="mx-1 text-uppercase">EN</span>
+      </button>
+    </div>
+  </div>
+  <main class="page-content">
+    <app-scroll-top></app-scroll-top>
 
-<app-footer></app-footer>
+    <app-home></app-home>
+    <app-services></app-services>
+    <app-works></app-works>
+    <app-news></app-news>
+    <app-feedback></app-feedback>
+    <app-videos></app-videos>
+    <app-contact></app-contact>
+    <app-website></app-website>
+  </main>
+
+  <app-footer></app-footer>
+</div>

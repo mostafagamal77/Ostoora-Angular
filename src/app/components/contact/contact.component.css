@@ -4,13 +4,9 @@
     position: relative;
     & label {
       position: absolute;
-      left: 10px;
       top: 50%;
       translate: 0 -50%;
       font-size: 18px;
-    }
-    & .ar {
-      right: 10px;
     }
     & input:not(type[submit]),
     & textarea {
