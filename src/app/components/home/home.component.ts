@@ -16,25 +16,25 @@ export class HomeComponent implements OnInit {
     private _login: LoginService,
     private homeImages: GetHomeImagesService,
     public _ChangeLangService: ChangeLangService
-  ) {}
-
-  getHomeImages(): any {
-    this.homeImages.getHomeImages().subscribe({
-      next: (res) => {
-        this.homeImagesArr = res.data;
-      },
-    });
-  }
-
-  ngOnInit(): void {
+  ) {
     this.login({
       email: 'admin@gmail.com',
       password: 'generalhouse',
     });
+  }
 
+  ngOnInit(): void {
+    this.getHomeImages();
+  }
+
+  getHomeImages(): any {
     setTimeout(() => {
-      this.getHomeImages();
-    }, 1000);
+      this.homeImages.getHomeImages().subscribe({
+        next: (res) => {
+          this.homeImagesArr = res.data;
+        },
+      });
+    }, 1200);
   }
 
   login(loginForm: any) {

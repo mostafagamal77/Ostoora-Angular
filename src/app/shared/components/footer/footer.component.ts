@@ -16,10 +16,12 @@ export class FooterComponent implements OnInit {
   }
 
   getIcons() {
-    this._FooterIconsService.getIcons().subscribe({
-      next: (res) => {
-        this.icons = res.data;
-      },
-    });
+    setTimeout(() => {
+      this._FooterIconsService.getIcons().subscribe({
+        next: (res) => {
+          this.icons = res.data;
+        },
+      });
+    }, 1200);
   }
 }

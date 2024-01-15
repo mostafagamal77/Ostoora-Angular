@@ -32,12 +32,14 @@ export class WorksComponent implements AfterViewInit, OnInit {
     });
   }
   ourWorks() {
-    this._OurServicesService.ourWorks().subscribe({
-      next: (res) => {
-        this.loaded = true;
-        this.works = res.data;
-      },
-    });
+    setTimeout(() => {
+      this._OurServicesService.ourWorks().subscribe({
+        next: (res) => {
+          this.loaded = true;
+          this.works = res.data;
+        },
+      });
+    }, 1200);
   }
 
   worksSlides: any[] = [

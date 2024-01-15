@@ -162,18 +162,19 @@ export class VideosComponent implements AfterViewInit, OnInit {
   }
 
   getVideos() {
-    this._VideosService.getVideos().subscribe({
-      next: (res) => {
-        console.log(res);
-        this.videos = res.data;
-        this.videos.forEach((video) => {
-          console.log(video.link);
-          video.link = this.sanitizer.bypassSecurityTrustResourceUrl(
-            video.link
-          );
-        });
-      },
-    });
+    setTimeout(() => {
+      this._VideosService.getVideos().subscribe({
+        next: (res) => {
+          this.videos = res.data;
+          this.videos.forEach((video) => {
+            console.log(video.link);
+            video.link = this.sanitizer.bypassSecurityTrustResourceUrl(
+              video.link
+            );
+          });
+        },
+      });
+    }, 1200);
   }
 
   // openModal(event: any) {
