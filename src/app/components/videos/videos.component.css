@@ -7,6 +7,11 @@
       -moz-transition: var(--transition);
       -ms-transition: var(--transition);
       -o-transition: var(--transition);
+      @media (min-width: 768px) {
+        .video {
+          height: 400px;
+        }
+      }
     }
     & .video-overlay {
       position: absolute;

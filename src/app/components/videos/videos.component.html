@@ -1,7 +1,28 @@
 <section class="videos py-5 position-relative">
   <div class="container">
-    <swiper-container dir="ltr" class="videos-slider px-4" navigation="true">
-      <swiper-slide *ngFor="let video of videosSlides">
+    <swiper-container
+      dir="ltr"
+      class="videos-slider"
+      navigation="true"
+      speed="1500"
+    >
+      <swiper-slide *ngFor="let video of videos">
+        <div class="position-relative vid-card">
+          <iframe
+            [src]="video.link"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-100 video"
+          ></iframe>
+          <!-- <div [attr.data-videoSrc]="video.link" class="video-overlay">
+            <button class="btn play-video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </div> -->
+        </div>
+      </swiper-slide>
+      <!-- <swiper-slide *ngFor="let video of videosSlides">
         <div class="position-relative vid-card">
           <img
             loading="lazy"
@@ -19,7 +40,7 @@
             </button>
           </div>
         </div>
-      </swiper-slide>
+      </swiper-slide> -->
     </swiper-container>
   </div>
   <div class="dots">
@@ -27,7 +48,7 @@
   </div>
 </section>
 
-<app-video-popup
+<!-- <app-video-popup
   [videoSrc]="videoSrc"
   *ngIf="_VideoOpenService.openVideo.value"
-></app-video-popup>
+></app-video-popup> -->

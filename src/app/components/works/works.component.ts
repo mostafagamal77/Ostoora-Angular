@@ -1,12 +1,45 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ChangeLangService } from 'src/app/services/change-lang.service';
+import { OurServicesService } from 'src/app/services/our-services.service';
 
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.css'],
 })
-export class WorksComponent implements AfterViewInit {
+export class WorksComponent implements AfterViewInit, OnInit {
+  imgUrl: string = './assets/imgs/work1.png';
+  loaded: boolean = false;
+  worksTitles!: any[];
+  works!: any[];
+
+  constructor(
+    private _OurServicesService: OurServicesService,
+    public _ChangeLangService: ChangeLangService
+  ) {}
+
+  ngOnInit(): void {
+    this.worksTitle();
+    this.ourWorks();
+  }
+
+  worksTitle() {
+    this._OurServicesService.worksTitle().subscribe({
+      next: (res) => {
+        this.worksTitles = res.data;
+      },
+    });
+  }
+  ourWorks() {
+    this._OurServicesService.ourWorks().subscribe({
+      next: (res) => {
+        this.loaded = true;
+        this.works = res.data;
+      },
+    });
+  }
+
   worksSlides: any[] = [
     {
       imgSrc: './assets/imgs/work1.png',
@@ -167,7 +200,7 @@ export class WorksComponent implements AfterViewInit {
         grabCursor: true,
         loop: true,
         loopAddBlankSlides: true,
-        slidesPerView: 2.15,
+        slidesPerView: 2,
         spaceBetween: 30,
         grid: {
           rows: 2,

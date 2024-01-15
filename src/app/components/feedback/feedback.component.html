@@ -6,29 +6,34 @@
     <div class="feedback-content my-5">
       <div class="feedback-slider" dir="ltr">
         <owl-carousel-o [options]="feedbackOptions" class="feedback-slider">
-          <ng-container *ngFor="let feedback of feedbackSlides">
+          <ng-container *ngFor="let review of reviews">
             <ng-template carouselSlide>
               <div class="card">
                 <img
                   loading="lazy"
-                  [src]="feedback.imgSrc"
+                  [src]="review.img_path"
                   class="card-img-top"
                   alt="feedback image"
                 />
                 <div class="card-body">
                   <h5 class="card-title text-capitalize">
-                    {{ feedback.name }}
+                    {{
+                      _ChangeLangService.isRtl.value
+                        ? review.title_ar
+                        : review.title
+                    }}
                   </h5>
                   <div
                     class="opinion card-text d-flex justify-content-between align-intems-center"
                   >
-                    <p class="text-capitalize">{{ feedback.opinion }}</p>
                     <div class="stars">
-                      <span><i class="fa-solid fa-star"></i></span>
-                      <span><i class="fa-solid fa-star"></i></span>
-                      <span><i class="fa-solid fa-star"></i></span>
-                      <span><i class="fa-solid fa-star"></i></span>
-                      <span><i class="fa-regular fa-star"></i></span>
+                      <span *ngFor="let item of starArray(review.rate)"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+
+                      <span *ngIf="review.rate < 5"
+                        ><i class="fa-regular fa-star"></i
+                      ></span>
                     </div>
                   </div>
                 </div>

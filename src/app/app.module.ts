@@ -26,8 +26,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { VideoPopupComponent } from './components/video-popup/video-popup.component';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HTTP_INTERCEPTORS,
+  HttpClient,
+  HttpClientModule,
+} from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AddTokenInterceptor } from './interceptors/add-token.interceptor';
+import { ReactiveFormsModule } from '@angular/forms';
 // register Swiper custom elements
 register();
 
@@ -54,6 +60,7 @@ register();
     BrowserAnimationsModule,
     CarouselModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -63,7 +70,13 @@ register();
       },
     }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AddTokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })

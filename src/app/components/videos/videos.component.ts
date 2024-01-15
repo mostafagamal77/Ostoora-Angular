@@ -1,17 +1,26 @@
-import { Component, AfterViewInit, inject } from '@angular/core';
+import { Component, AfterViewInit, inject, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { VideoOpenService } from 'src/app/services/video-open.service';
+import { VideosService } from 'src/app/services/videos.service';
 
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.css'],
 })
-export class VideosComponent implements AfterViewInit {
+export class VideosComponent implements AfterViewInit, OnInit {
   private sanitizer = inject(DomSanitizer);
 
-  constructor(public _VideoOpenService: VideoOpenService) {}
+  constructor(
+    public _VideoOpenService: VideoOpenService,
+    private _VideosService: VideosService
+  ) {}
 
+  ngOnInit(): void {
+    this.getVideos();
+  }
+
+  videos: any[] = [];
   videoSrc: any;
 
   videosSlides: any[] = [
@@ -152,11 +161,26 @@ export class VideosComponent implements AfterViewInit {
     }
   }
 
-  openModal(event: any) {
-    this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(
-      event.currentTarget.dataset.videosrc
-    );
-    this._VideoOpenService.openVideo.next(true);
-    console.log(event.currentTarget.dataset.videosrc);
+  getVideos() {
+    this._VideosService.getVideos().subscribe({
+      next: (res) => {
+        console.log(res);
+        this.videos = res.data;
+        this.videos.forEach((video) => {
+          console.log(video.link);
+          video.link = this.sanitizer.bypassSecurityTrustResourceUrl(
+            video.link
+          );
+        });
+      },
+    });
   }
+
+  // openModal(event: any) {
+  //   this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(
+  //     event.currentTarget.dataset.videosrc
+  //   );
+  //   this._VideoOpenService.openVideo.next(true);
+  //   console.log(event.currentTarget.dataset.videosrc);
+  // }
 }

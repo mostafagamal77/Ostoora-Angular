@@ -1,5 +1,10 @@
 <section class="landing py-5" id="home">
   <div class="container">
+    <h2
+      class="heading text-center text-capitalize text-light mb-4 my-3 my-md-4 fw-bold"
+    >
+      {{ "mainHeader" | translate }}
+    </h2>
     <div
       class="landing-content row align-items-center justify-content-evenly justify-content-md-between"
     >
@@ -10,6 +15,29 @@
       </div>
 
       <div class="col-6" dir="ltr">
+        <swiper-container
+          autoplay="true"
+          autoplay-delay="3000"
+          speed="1000"
+          autoplay-disable-on-interaction="false"
+          space-between="10"
+          grab-cursor="true"
+        >
+          <swiper-slide *ngFor="let slide of homeImagesArr">
+            <img
+              *ngIf="slide.type === 'img'; else videoBlock"
+              class="img-fluid"
+              [src]="[slide.path]"
+              alt="landing image"
+            />
+            <ng-template #videoBlock>
+              <video [src]="slide.path" class="w-100" controls></video>
+            </ng-template>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+
+      <!-- <div class="col-6" dir="ltr">
         <swiper-container
           autoplay="true"
           autoplay-delay="3000"
@@ -25,7 +53,8 @@
             <img class="img-fluid" [src]="[slide.imgSrc]" alt="landing image"
           /></swiper-slide>
         </swiper-container>
-      </div>
+      </div> -->
+
       <div class="col-1 p-0">
         <a
           href="http://wa.me/+201020089126"

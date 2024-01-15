@@ -13,7 +13,8 @@ export class ServicesComponent {
     touchDrag: true,
     pullDrag: false,
     dots: false,
-    navSpeed: 700,
+    smartSpeed: 1000,
+    navSpeed: 1000,
     navText: [
       '<i class="fa-solid fa-chevron-left"></i>',
       '<i class="fa-solid fa-chevron-right"></i>',

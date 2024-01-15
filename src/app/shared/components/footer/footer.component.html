@@ -5,18 +5,9 @@
     <h3 class="fw-normal fs-2 mb-3">{{ "footer.heading" | translate }}</h3>
     <p class="fs-6 my-3">{{ "footer.subtitle" | translate }}</p>
     <div class="icons d-flex justify-content-center align-items-center gap-2">
-      <a target="_blank" href="https://www.facebook.com/darshgemy"
-        ><i class="fa-brands fa-facebook-f"></i
-      ></a>
-      <a target="_blank" href="https://www.instagram.com/mustafa.gamal/"
-        ><i class="fa-brands fa-instagram"></i
-      ></a>
-      <a target="_blank" href="https://www.instagram.com/mustafa.gamal/"
-        ><i class="fa-brands fa-tiktok"></i
-      ></a>
-      <a target="_blank" href="https://twitter.com/gemy7030"
-        ><i class="fa-brands fa-twitter"></i
-      ></a>
+      <a target="_blank" *ngFor="let icon of icons" [href]="icon.link">
+        <img class="img-fluid" [src]="icon.img_path" alt="" />
+      </a>
     </div>
   </div>
 </footer>
