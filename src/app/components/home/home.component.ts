@@ -13,15 +13,9 @@ export class HomeComponent implements OnInit {
   homeImagesArr: any[] = [];
 
   constructor(
-    private _login: LoginService,
     private homeImages: GetHomeImagesService,
     public _ChangeLangService: ChangeLangService
-  ) {
-    this.login({
-      email: 'admin@gmail.com',
-      password: 'generalhouse',
-    });
-  }
+  ) {}
 
   ngOnInit(): void {
     this.getHomeImages();
@@ -35,13 +29,5 @@ export class HomeComponent implements OnInit {
         },
       });
     }, 1200);
-  }
-
-  login(loginForm: any) {
-    this._login.login(loginForm).subscribe({
-      next: (res) => {
-        localStorage.setItem('token', res.data.token);
-      },
-    });
   }
 }
