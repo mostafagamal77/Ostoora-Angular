@@ -10,7 +10,7 @@ export class GetHomeImagesService {
 
   getHomeImages(): Observable<any> {
     return this.http.get(
-      'https://back.landing.alostora.online/public/api/slider_element'
+      'https://backend-landing.decorationghs.com/api/slider_element'
     );
   }
 }

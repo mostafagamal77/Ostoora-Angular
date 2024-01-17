@@ -10,6 +10,19 @@
     -moz-transition: var(--transition);
     -ms-transition: var(--transition);
     -o-transition: var(--transition);
+    & .reel-video {
+      height: 200px;
+    }
+    @media (min-width: 768px) {
+      & .reel-video {
+        height: 450px;
+      }
+    }
+    @media (min-width: 992px) {
+      & .reel-video {
+        height: 550px;
+      }
+    }
   }
   & .news-card:hover {
     filter: grayscale(100%);

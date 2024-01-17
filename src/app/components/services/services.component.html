@@ -2,7 +2,7 @@
   <div class="container">
     <div class="px-3" dir="ltr">
       <owl-carousel-o [options]="servicesOptions" class="services-slider">
-        <ng-container *ngFor="let service of 'servicesSlides' | translate">
+        <ng-container *ngFor="let service of services">
           <ng-template carouselSlide>
             <div
               class="d-flex align-items-center justify-content-center flex-column g-3"
@@ -11,14 +11,18 @@
                 <img
                   loading="lazy"
                   class="img-fluid"
-                  [src]="service.imgSrc"
-                  alt=" services image"
+                  [src]="service.img_path"
+                  alt=" service img"
                 />
               </div>
               <p
                 class="service-text text-capitalize fw-bold text-light text-center mt-3"
               >
-                {{ service.text }}
+                {{
+                  _ChangeLangService.isRtl.value
+                    ? service.title_ar
+                    : service.title_en
+                }}
               </p>
             </div>
           </ng-template>

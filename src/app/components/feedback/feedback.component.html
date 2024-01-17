@@ -23,6 +23,13 @@
                         : review.title
                     }}
                   </h5>
+                  <p>
+                    {{
+                      _ChangeLangService.isRtl.value
+                        ? review.depratment_ar
+                        : review.depratment
+                    }}
+                  </p>
                   <div
                     class="opinion card-text d-flex justify-content-between align-intems-center"
                   >

@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ChangeLangService } from 'src/app/services/change-lang.service';
+import { CircularServicesService } from 'src/app/services/circular-services.service';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css'],
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit {
+  services: any[] = [];
+
+  constructor(
+    private _CircularServicesService: CircularServicesService,
+    public _ChangeLangService: ChangeLangService
+  ) {}
+
+  ngOnInit(): void {
+    this.getServices();
+  }
+
   servicesOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -31,4 +44,12 @@ export class ServicesComponent {
     },
     nav: true,
   };
+
+  getServices() {
+    this._CircularServicesService.getServices().subscribe({
+      next: (res) => {
+        this.services = res.data;
+      },
+    });
+  }
 }

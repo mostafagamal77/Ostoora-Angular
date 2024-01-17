@@ -1,21 +1,30 @@
 <section class="py-5 website">
   <div class="container">
     <div
+      *ngFor="let item of footerElements"
       class="d-flex flex-column flex-md-row justify-content-between align-items-center"
     >
       <div class="text">
         <h2 class="text-capitalize fw-bold">
-          {{ "website.heading" | translate }}
+          {{ _ChangeLangService.isRtl.value ? item.title_ar : item.title }}
         </h2>
         <p class="fw-bold fs-5 text-capitalize">
-          {{ "website.subtitle" | translate }}
+          {{
+            _ChangeLangService.isRtl.value
+              ? item.description_ar
+              : item.description
+          }}
         </p>
       </div>
       <a
-        href="#"
+        [href]="item.button_link"
         target="_blank"
         class="btn main-btn fw-medium text-capitalize"
-        >{{ "website.visitBtn" | translate }}</a
+        >{{
+          _ChangeLangService.isRtl.value
+            ? item.button_title_ar
+            : item.button_title
+        }}</a
       >
     </div>
   </div>

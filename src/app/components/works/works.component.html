@@ -43,6 +43,13 @@
                   _ChangeLangService.isRtl.value ? work.title_ar : work.title
                 }}
               </h5>
+              <p>
+                {{
+                  _ChangeLangService.isRtl.value
+                    ? work.description_ar
+                    : work.description
+                }}
+              </p>
             </div>
             <div class="card-overlay">
               <a href="#"><i class="fa-solid fa-link"></i></a>

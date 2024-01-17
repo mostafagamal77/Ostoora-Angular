@@ -10,7 +10,7 @@ export class GetReviewsService {
 
   getReviews(): Observable<any> {
     return this.http.get(
-      'https://back.landing.alostora.online/public/api/review'
+      'https://backend-landing.decorationghs.com/api/review'
     );
   }
 }

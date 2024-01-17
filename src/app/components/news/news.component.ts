@@ -1,61 +1,29 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { VideoOpenService } from 'src/app/services/video-open.service';
+import { VideosService } from 'src/app/services/videos.service';
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.css'],
 })
-export class NewsComponent {
+export class NewsComponent implements OnInit {
   private sanitizerVid = inject(DomSanitizer);
 
-  constructor(public _VideoOpenService: VideoOpenService) {}
+  constructor(
+    public _VideoOpenService: VideoOpenService,
+    private _VideosService: VideosService
+  ) {}
 
-  videoSrc: any;
-
-  newsSlides: any[] = [
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/668nUCeBHyY',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/668nUCeBHyY',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/668nUCeBHyY',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/news.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-  ];
+  ngOnInit(): void {
+    this.getReels();
+  }
+  reels: any[] = [];
 
   newsOptions: OwlOptions = {
-    loop: true,
+    // loop: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
@@ -83,10 +51,16 @@ export class NewsComponent {
     nav: false,
   };
 
-  openModal(event: any) {
-    this.videoSrc = this.sanitizerVid.bypassSecurityTrustResourceUrl(
-      event.target.dataset.video
-    );
-    this._VideoOpenService.openReel.next(true);
+  getReels() {
+    this._VideosService.getVideos().subscribe({
+      next: (res) => {
+        this.reels = res.data.reels;
+        this.reels.forEach((video) => {
+          video.link = this.sanitizerVid.bypassSecurityTrustResourceUrl(
+            video.link
+          );
+        });
+      },
+    });
   }
 }

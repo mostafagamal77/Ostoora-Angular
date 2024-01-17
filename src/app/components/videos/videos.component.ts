@@ -11,128 +11,13 @@ import { VideosService } from 'src/app/services/videos.service';
 export class VideosComponent implements AfterViewInit, OnInit {
   private sanitizer = inject(DomSanitizer);
 
-  constructor(
-    public _VideoOpenService: VideoOpenService,
-    private _VideosService: VideosService
-  ) {}
+  constructor(private _VideosService: VideosService) {}
 
   ngOnInit(): void {
     this.getVideos();
   }
 
   videos: any[] = [];
-  videoSrc: any;
-
-  videosSlides: any[] = [
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/668nUCeBHyY',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/nqye02H_H6I',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/DeHUFsrCYr0',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/Z_UW5AMamKY',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/DeHUFsrCYr0',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/668nUCeBHyY',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/nqye02H_H6I',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/DeHUFsrCYr0',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/Z_UW5AMamKY',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/DeHUFsrCYr0',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/668nUCeBHyY',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/nqye02H_H6I',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/DeHUFsrCYr0',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/Z_UW5AMamKY',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/DeHUFsrCYr0',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/z326fHt6w9g',
-    },
-    {
-      imgSrc: './assets/imgs/feedback.png',
-      videoSrc: 'https://www.youtube.com/embed/FbH2Gclbk6U',
-    },
-  ];
 
   swiperConfig = {
     slidesPerView: 'auto',
@@ -162,26 +47,15 @@ export class VideosComponent implements AfterViewInit, OnInit {
   }
 
   getVideos() {
-    setTimeout(() => {
-      this._VideosService.getVideos().subscribe({
-        next: (res) => {
-          this.videos = res.data;
-          this.videos.forEach((video) => {
-            console.log(video.link);
-            video.link = this.sanitizer.bypassSecurityTrustResourceUrl(
-              video.link
-            );
-          });
-        },
-      });
-    }, 1200);
+    this._VideosService.getVideos().subscribe({
+      next: (res) => {
+        this.videos = res.data.youtube;
+        this.videos.forEach((video) => {
+          video.link = this.sanitizer.bypassSecurityTrustResourceUrl(
+            video.link
+          );
+        });
+      },
+    });
   }
-
-  // openModal(event: any) {
-  //   this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(
-  //     event.currentTarget.dataset.videosrc
-  //   );
-  //   this._VideoOpenService.openVideo.next(true);
-  //   console.log(event.currentTarget.dataset.videosrc);
-  // }
 }

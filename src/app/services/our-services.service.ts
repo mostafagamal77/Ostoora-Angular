@@ -10,13 +10,13 @@ export class OurServicesService {
 
   worksTitle(): Observable<any> {
     return this.http.get(
-      'https://back.landing.alostora.online/public/api/service'
+      'https://backend-landing.decorationghs.com/api/service'
     );
   }
 
   ourWorks(): Observable<any> {
     return this.http.get(
-      'https://back.landing.alostora.online/public/api/home_page_image'
+      'https://backend-landing.decorationghs.com/api/home_page_image'
     );
   }
 }

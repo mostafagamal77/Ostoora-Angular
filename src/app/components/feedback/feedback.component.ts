@@ -23,13 +23,11 @@ export class FeedbackComponent implements OnInit {
     this.getReviews();
   }
   getReviews() {
-    setTimeout(() => {
-      this._GetReviewsService.getReviews().subscribe({
-        next: (res) => {
-          this.reviews = res.data;
-        },
-      });
-    }, 1200);
+    this._GetReviewsService.getReviews().subscribe({
+      next: (res) => {
+        this.reviews = res.data;
+      },
+    });
   }
 
   feedbackOptions: OwlOptions = {

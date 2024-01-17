@@ -10,7 +10,7 @@ export class FooterIconsService {
 
   getIcons(): Observable<any> {
     return this.http.get(
-      'https://back.landing.alostora.online/public/api/footer_icon'
+      'https://backend-landing.decorationghs.com/api/footer_icon'
     );
   }
 }

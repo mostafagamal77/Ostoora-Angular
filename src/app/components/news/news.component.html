@@ -12,18 +12,17 @@
     <div class="news-content mb-4" dir="ltr">
       <div class="news-slider">
         <owl-carousel-o [options]="newsOptions" class="works-slider">
-          <ng-container *ngFor="let new of newsSlides">
+          <ng-container *ngFor="let new of reels">
             <ng-template carouselSlide>
               <div class="news-card">
                 <div class="reel">
-                  <img
-                    (click)="openModal($event)"
-                    [attr.data-video]="new.videoSrc"
-                    loading="lazy"
-                    class="img-fluid"
-                    [src]="new.imgSrc"
-                    alt="news image"
-                  />
+                  <iframe
+                    [src]="new.link"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    class="w-100 reel-video"
+                  ></iframe>
                 </div>
               </div>
             </ng-template>
@@ -37,8 +36,3 @@
     <img loading="lazy" src="./assets/imgs/dotslg.png" alt="dots" />
   </div>
 </section>
-
-<app-video-popup
-  [videoSrc]="videoSrc"
-  *ngIf="_VideoOpenService.openReel.value"
-></app-video-popup>

@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class VideosService {
+export class CircularServicesService {
   constructor(private http: HttpClient) {}
 
-  getVideos(): Observable<any> {
+  getServices(): Observable<any> {
     return this.http.get(
-      'https://backend-landing.decorationghs.com/api/home_page_video'
+      'https://backend-landing.decorationghs.com/api/first_section_circular_image'
     );
   }
 }

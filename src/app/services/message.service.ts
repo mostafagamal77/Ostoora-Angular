@@ -11,7 +11,7 @@ export class MessageService {
 
   sendMessage(message: FormMessage): Observable<any> {
     return this.http.post(
-      'https://back.landing.alostora.online/public/api/client/form_message',
+      'https://backend-landing.decorationghs.com/api/client/form_message',
       message
     );
   }

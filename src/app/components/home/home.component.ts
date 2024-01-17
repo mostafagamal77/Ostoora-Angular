@@ -22,12 +22,10 @@ export class HomeComponent implements OnInit {
   }
 
   getHomeImages(): any {
-    setTimeout(() => {
-      this.homeImages.getHomeImages().subscribe({
-        next: (res) => {
-          this.homeImagesArr = res.data;
-        },
-      });
-    }, 1200);
+    this.homeImages.getHomeImages().subscribe({
+      next: (res) => {
+        this.homeImagesArr = res.data;
+      },
+    });
   }
 }
