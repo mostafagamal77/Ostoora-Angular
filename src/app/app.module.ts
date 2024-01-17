@@ -34,6 +34,7 @@ import {
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AddTokenInterceptor } from './interceptors/add-token.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PublicUrlPipe } from './pipes/public-url.pipe';
 // register Swiper custom elements
 register();
 
@@ -52,6 +53,7 @@ register();
     VideosComponent,
     VideoPopupComponent,
     ScrollTopComponent,
+    PublicUrlPipe,
   ],
   imports: [
     BrowserModule,

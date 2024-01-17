@@ -9,6 +9,9 @@
     -moz-transition: var(--transition);
     -ms-transition: var(--transition);
     -o-transition: var(--transition);
+    & .work-img {
+      max-height: 340px !important;
+    }
     @media (max-width: 767px) {
       & .card-body {
         & p {

@@ -6,7 +6,11 @@
     <p class="fs-6 my-3">{{ "footer.subtitle" | translate }}</p>
     <div class="icons d-flex justify-content-center align-items-center gap-2">
       <a target="_blank" *ngFor="let icon of icons" [href]="icon.link">
-        <img class="img-fluid" [src]="icon.img_path" alt="" />
+        <img
+          class="img-fluid d-flex align-items-center justify-content-center"
+          [src]="icon.img_path | publicUrl"
+          alt="footer icon"
+        />
       </a>
     </div>
   </div>

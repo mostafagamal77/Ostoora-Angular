@@ -24,7 +24,11 @@
           grab-cursor="true"
         >
           <swiper-slide *ngFor="let slide of homeImagesArr">
-            <img class="img-fluid" [src]="[slide.path]" alt="landing image" />
+            <img
+              class="img-fluid"
+              [src]="slide.path | publicUrl"
+              alt="landing image"
+            />
           </swiper-slide>
         </swiper-container>
       </div>

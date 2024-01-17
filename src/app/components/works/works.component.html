@@ -25,9 +25,9 @@
             <img
               *ngIf="loaded"
               loading="lazy"
-              [src]="work.img_path"
-              class="img-fluid"
-              alt="work image"
+              [src]="work.img_path | publicUrl"
+              class="img-fluid work-img"
+              alt="work image "
             />
             <img
               *ngIf="!loaded"
